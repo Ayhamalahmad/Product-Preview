@@ -1,0 +1,128 @@
+:root {
+    /* Primary */
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    /* Neutral */
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+    /* Body Copy */
+    --Font-size-paragraph: 14px;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--Cream);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.product-preview {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--White);
+}
+
+@media (max-width:767px) {
+    .product-preview {
+        flex-direction: column;
+    }
+}
+
+/* Image */
+
+
+.product-preview .image img {
+    width: 250px;
+    height: 400px;
+    border-radius: 6px 0 0 6px;
+}
+
+@media (max-width:767px) {
+    .product-preview .image img {
+        content: url(../imges/image-product-mobile.jpg);
+        height: 175px;
+        border-radius: 6px 6px 0 0;
+    }
+}
+
+/* Text */
+.product-preview .texts {
+    width: 250px;
+    height: 400px;
+    background-color: var(--White);
+    padding: 20px;
+    border-radius: 0 6px 6px 0px;
+
+}
+
+
+.product-preview .texts p {
+    color: var(--Dark-grayish-blue);
+    font-size: var(--Font-size-paragraph);
+    text-transform: capitalize;
+}
+
+
+.product-preview .texts>p:first-of-type {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.product-preview .texts p:nth-of-type(2) {
+    line-height: 1.5;
+}
+
+.product-preview .texts>h2:first-of-type {
+    padding: 15px 0;
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: capitalize;
+    font-family: 'Fraunces', serif;
+}
+
+.product-preview .texts .prise {
+    display: flex;
+    align-items: center;
+}
+
+.product-preview .texts .prise>h2:nth-of-type(1) {
+    color: var(--Dark-cyan);
+    font-family: 'Fraunces', serif;
+    padding: 15px 0;
+
+}
+
+.product-preview .texts .prise>p:nth-of-type(1) {
+    padding-left: 15px;
+    font: caption;
+    font-size: 10px;
+    text-decoration: line-through;
+}
+
+
+.product-preview .texts .button {
+    background-color: var(--Dark-cyan);
+    color: var(--White);
+    padding: 10px 15px;
+    border-radius: 6px;
+    text-align: center;
+    transition: .3s;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-size: 15px;
+}
+
+.product-preview .texts .button:hover {
+    background-color: var(--Very-dark-blue);
+}
+
+.product-preview .texts .button i {
+    padding-right: 10px;
+}
